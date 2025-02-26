@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Struktur Kepengurusan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1f3b63;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            padding: 10px;
+        }
+        .logo-container img {
+            height: 70px;
+            margin-right: 5px;
+        }
+        .title h1, .title h2, .title h3, .title h4 {
+            line-height: 0.4;
+        }
+        .main-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            gap: 20px;
+        }
+        .section {
+            background-color: white;
+            color: black;
+            padding: 8px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            width: 100%;
+        }
+        .sub-section {
+            background-color: #4a6fa5;
+            color: white;
+            padding: 6px;
+            margin: 4px 0;
+            border-radius: 6px;
+        }
+        .members {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 80px;
+        }
+        .members img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid black;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .members img:hover {
+            transform: scale(1.2);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+        }
+        .members img:active {
+            animation: shake 0.3s;
+        }
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-3px); }
+            50% { transform: translateX(3px); }
+            75% { transform: translateX(-3px); }
+            100% { transform: translateX(0); }
+        }
+
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal-content {
+            background-color: rgb(32, 22, 22);
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+        }
+        .modal img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        .close {
+            color: red;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .btn-instagram {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #E4405F;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo-container">
+            <img src="../foto/himafi.png" alt="Logo">
+        </div>
+        <div class="title">
+            <h1>Struktur Kepengurusan</h1>
+            <h2>Himpunan Mahasiswa Fisika</h2>
+            <h3>UIN Imam Bonjol Padang</h3>
+            <h4>Periode 2025/2026</h4>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="left-container">
+            <div class="section">
+                <h2>Dewan Penasehat Organisasi</h2>
+                <div class="members">
+                    <img src="../foto/profil.jpg" alt="A" 
+                         data-name="Rahmi Tania Putri" data-role="Dewan Penasehat Organisasi" data-ig="https://instagram.com/nama1" onclick="openModal(this)">
+                    <img src="../foto/profil.jpg" alt="A" 
+                         data-name="Khairun Nisa Isnaini" data-role="Dewan Penasehat Organisasi" data-ig="https://instagram.com/nama2" onclick="openModal(this)">
+                    <img src="../foto/profil.jpg" alt="A" 
+                         data-name="Niswatul Khairiyah" data-role="Dewan Penasehat Organisasi" data-ig="https://instagram.com/nama3" onclick="openModal(this)">
+                </div>
+                
+            </div>
+            <div class="section">
+                <h2>Dewan Pengurus Harian</h2>
+                <div class="sub-section">
+                    <h3>Ketua & Wakil Ketua Umum</h3>
+                    <div class="members">
+                        <img src="../foto/profil.jpg" alt="A" 
+                             data-name="Fajar Eka Mahendra" data-role="Ketua Umum" data-ig="https://instagram.com/nama1" onclick="openModal(this)">
+                        <img src="../foto/profil.jpg" alt="A" 
+                             data-name="Muhammad Arsyadi Olfa Putra" data-role="Wakil Ketua Umum" data-ig="https://instagram.com/nama2" onclick="openModal(this)">
+                    </div>
+                </div>
+                <div class="sub-section">
+                    <h3>Sekretaris & Wakil Sekretaris Umum</h3>
+                    <div class="members">
+                        <img src="foto pengurus/Ig_ jdningsih_.jpg" alt="A" 
+                             data-name="Jazirah Dwi Ningsih" data-role="Sekretaris Umum" data-ig="https://www.instagram.com/jdningsih_?igsh=MWtnenkwa3J4d2pseQ==" onclick="openModal(this)">
+                        <img src="../foto/profil.jpg" alt="A" 
+                             data-name="Juriana" data-role="Wakil Sekretaris Umum" data-ig="https://instagram.com/nama2" onclick="openModal(this)">
+                    </div>
+                </div>
+                <div class="sub-section">
+                    <h3>Bendahara & Wakil Bendahara Umum</h3>
+                    <div class="members">
+                        <img src="../foto/profil.jpg" alt="A" 
+                             data-name="Tamara Rizki Putri" data-role="Bendahara Umum" data-ig="https://instagram.com/nama1" onclick="openModal(this)">
+                        <img src="../foto/profil.jpg" alt="A" 
+                             data-name="Fitri Nabila" data-role="Wakil Bendahara Umum" data-ig="https://instagram.com/nama2" onclick="openModal(this)">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="right-container">
+            <div class="section">
+                <h2>Bidang Kaderisasi</h2>
+                <div class="members">
+                    <img src="../foto/profil.jpg" alt="A" 
+                         data-name="Cahya Tri Azkia" data-role="Ketua Bidang" data-ig="https://instagram.com/nama1" onclick="openModal(this)">
+                    <img src="../foto/profil.jpg" alt="A" 
+                         data-name="Arnita Maharani" data-role="Sekretaris Bidang" data-ig="https://instagram.com/nama2" onclick="openModal(this)">
+                    <img src="../foto/profil.jpg" alt="A" 
+                         data-name="Eka Silvia" data-role="Anggota Bidang" data-ig="https://instagram.com/nama3" onclick="openModal(this)">
+                </div>
+            </div>
+            <div class="section">
+                <h2>Bidang Penelitian & Pengembangan</h2>
+                <div class="members">
+                    <img src="../foto/profil.jpg" alt="A" 
+                         data-name="Nia Ulfa Sari" data-role="Ketua Bidang" data-ig="https://instagram.com/nama1" onclick="openModal(this)">
+                    <img src="../foto/profil.jpg" alt="A" 
+                         data-name="Azhariyah Mufidah Hariri" data-role="Sekretaris Bidang" data-ig="https://instagram.com/nama2" onclick="openModal(this)">
+                    <img src="../foto/profil.jpg" alt="A" 
+                         data-name="Harith Fildzal Raziqin" data-role="Anggota Bidang" data-ig="https://instagram.com/nama3" onclick="openModal(this)">
+                </div>
+            </div>
+            <div class="section">
+                <h2>Bidang Intelektual</h2>
+                <div class="members">
+                    <img src="../foto/profil.jpg" alt="A" 
+                         data-name="Arbai" data-role="Ketua Bidang" data-ig="https://instagram.com/nama1" onclick="openModal(this)">
+                    <img src="../foto/profil.jpg" alt="A" 
+                         data-name="Berliana Permata Sari" data-role="Sekretaris Bidang" data-ig="https://instagram.com/nama2" onclick="openModal(this)">
+                    <img src="../foto/profil.jpg" alt="A" 
+                         data-name="Nur Aisah Ali" data-role="Anggota Bidang" data-ig="https://instagram.com/nama3" onclick="openModal(this)">
+                </div>
+            </div>
+            <div class="section">
+                <h2>Bidang Bakat Minat</h2>
+                <div class="members">
+                    <img src="../foto/profil.jpg" alt="A" 
+                         data-name="Nurul Aulia Salsabilah" data-role="Ketua Bidang" data-ig="https://instagram.com/nama1" onclick="openModal(this)">
+                    <img src="../foto/profil.jpg" alt="A" 
+                         data-name="Reza Syarif" data-role="Sekretaris Bidang" data-ig="https://instagram.com/nama2" onclick="openModal(this)">
+                    <img src="../foto/profil.jpg" alt="A" 
+                         data-name="Dhea Ananda Saputri" data-role="Anggota Bidang" data-ig="https://instagram.com/nama3" onclick="openModal(this)">
+                </div>
+            </div>
+        </div>
+        <div class="right-container">
+            <div class="section">
+                <h2>Bidang Informasi & Komunikasi</h2>
+                <div class="members">
+                    <img src="foto pengurus/ig ammardalimunther.jpg" alt="A" 
+                         data-name="Muammar MD" data-role="Ketua Bidang" data-ig="https://www.instagram.com/ammardalimunthers?igsh=N2thOGt6am9wOGRm" onclick="openModal(this)">
+                    <img src="../foto/profil.jpg" alt="A" 
+                         data-name="Fabiana Puti Alifa" data-role="Sekretaris Bidang" data-ig="https://instagram.com/nama2" onclick="openModal(this)">
+                    <img src="../foto/profil.jpg" alt="A" 
+                         data-name="Rahmat Saleh Nasution" data-role="Anggota Bidang" data-ig="https://instagram.com/nama3" onclick="openModal(this)">
+                </div>
+            </div>
+            <div class="section">
+                <h2>Bidang Sosial Ekonomi</h2>
+                <div class="members">
+                    <img src="../foto/profil.jpg" alt="A" 
+                         data-name="Ermaneli" data-role="Ketua Bidang" data-ig="https://instagram.com/nama1" onclick="openModal(this)">
+                    <img src="../foto/profil.jpg" alt="A" 
+                         data-name="Isna Zahrotul Laila" data-role="Sekretaris Bidang" data-ig="https://instagram.com/nama2" onclick="openModal(this)">
+                    <img src="../foto/profil.jpg" alt="A" 
+                         data-name="Riski Adila Zahra Lubis" data-role="Anggota Bidang" data-ig="https://instagram.com/nama3" onclick="openModal(this)">
+                </div>
+            </div>
+            <div class="section">
+                <h2>Bidang Kerohanian</h2>
+                <div class="members">
+                    <img src="../foto/profil.jpg" alt="A" 
+                         data-name="Fitri Afnan" data-role="Ketua Bidang" data-ig="https://instagram.com/nama1" onclick="openModal(this)">
+                    <img src="../foto/profil.jpg" alt="A" 
+                         data-name="Sintiya" data-role="Sekretaris Bidang" data-ig="https://instagram.com/nama2" onclick="openModal(this)">
+                    <img src="../foto/profil.jpg" alt="A" 
+                         data-name="Fitri Annisa" data-role="Anggota Bidang" data-ig="https://instagram.com/nama3" onclick="openModal(this)">
+                </div>
+            </div>
+            <div class="section">
+                <h2>Bidang Keputrian</h2>
+                <div class="members">
+                    <img src="../foto/profil.jpg" alt="A" 
+                         data-name="Annisa Wahyuni" data-role="Ketua Bidang" data-ig="https://instagram.com/nama1" onclick="openModal(this)">
+                    <img src="../foto/profil.jpg" alt="A" 
+                         data-name="Nurul Rizkina Nst" data-role="Sekretaris Bidang" data-ig="https://instagram.com/nama2" onclick="openModal(this)">
+                    <img src="../foto/profil.jpg" alt="A" 
+                         data-name="Hanifa Dewi" data-role="Anggota Bidang" data-ig="https://instagram.com/nama3" onclick="openModal(this)">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modal-img" src="" alt="Profile Picture">
+            <h3 id="modal-name"></h3>
+            <p id="modal-role"></p>
+            <a id="modal-ig" href="#" target="_blank" class="btn-instagram">Kunjungi Instagram</a>
+        </div>
+    </div>
+
+    <script>
+        function openModal(element) {
+            document.getElementById("modal-img").src = element.src;
+            document.getElementById("modal-name").textContent = element.getAttribute("data-name");
+            document.getElementById("modal-role").textContent = element.getAttribute("data-role");
+            document.getElementById("modal-ig").href = element.getAttribute("data-ig");
+            document.getElementById("myModal").style.display = "block";
+        }
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == document.getElementById("myModal")) {
+                closeModal();
+            }
+        }
+    </script>
+    
+</body>
+</html>

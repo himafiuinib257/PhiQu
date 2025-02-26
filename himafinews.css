@@ -1,0 +1,122 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.header-container h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+/* WhatsApp Icon Section */
+.whatsapp-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25D366; /* WhatsApp green color */
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.whatsapp-icon:hover {
+    background-color: #128C7E; /* Darker shade on hover */
+    transform: translateX(10px); /* Shift icon to the right */
+}
+
+/* WhatsApp Icon Image */
+.whatsapp-icon img {
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s ease;
+}
+
+/* Text inside WhatsApp Icon */
+.whatsapp-icon span {
+    display: none;
+    color: white;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+/* Hover animation for showing text */
+.whatsapp-icon:hover span {
+    display: inline-block;
+    animation: slideIn 0.5s ease-out;
+}
+
+/* Animation for sliding text */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Search Bar */
+.search-bar {
+    padding: 20px;
+    text-align: center;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+/* Jurnal List */
+.jurnal-list {
+    padding: 20px;
+}
+
+.jurnal-list ul {
+    list-style-type: none;
+}
+
+.jurnal-list li {
+    background-color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.jurnal-list li:hover {
+    background-color: #f0f0f0;
+}
+
+.jurnal-list li a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+}

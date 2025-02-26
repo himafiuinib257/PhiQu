@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhiQu.web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="foto/PhiQu.png" alt="Logo PhyQu.web" class="logo">
+            <h1 class="website-name">PhiQu.web</h1>
+        </div>
+
+        <div class="header-buttons">
+            <a href="https://wa.me/6285880541399?text=Halo%20saya%20mau%20tanya%20tentang%20PhiQu.web" class="header-button">Kontak Kami</a>
+        </div>
+    </header>
+    
+    <style>
+        .image-container {
+            position: relative;
+            display: inline-block;
+            text-align: center;
+            border-radius: 10px;
+        }
+    
+        .image-container img {
+            width: 100px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+    
+        .image-container:hover img {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+    
+        .image-container:active img {
+            transform: scale(0.95);
+        }
+    
+        .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+    
+        .image-container:hover .overlay-text {
+            opacity: 1;
+        }
+    </style>
+    
+    <figure class="image-container">
+        <a href="struktur-pengurus/integritas.html">
+            <img src="foto/himafi.png" alt="Logo Himafi">
+            <div class="overlay-text">Struktur Kepengurusan</div>
+        </a>
+        <figcaption style="margin-top: 8px; font-size: 16px; color: #000000;">Kabinet Integritas</figcaption>
+        <figcaption style="margin-top: 8px; font-size: 16px; color: #000000;">Periode 2025/2026</figcaption>
+    </figure>
+    
+
+    <main>
+    <!-- Card 1: Baca Jurnal Kami -->
+<div class="card-container">
+    <div class="card" id="card-jurnal">
+        <h3>Himafi News</h3>
+        <p>Temukan berbagai berita terkait acara yang dilakukan HIMAFI UIN_IB.</p>
+        <a href="himafinews.html">
+            <button class="card-button" id="baca-jurnal-btn">Lihat Berita</button>
+        </a>
+    </div>
+
+    <!-- Card 2: Masuk Kedalam Arsip -->
+    <div class="card" id="card-arsip">
+        <h3>Arsip Kepengurusan</h3>
+        <p>Arsip hanya bisa diakses oleh sekretaris umum dan anggota yang diberikan izin oleh sekretaris umum kepengurusan HIMAFI UIN-Imam Bonjol Padang</p>
+        <a href="e-arsip/index.php">
+            <button class="card-button" id="masuk-arsip-btn">Arsip Kepengurusan</button>
+        </a>
+    </div>
+</div>
+
+    <script>
+        // Mendapatkan modal dan tombol
+        var modal = document.getElementById("aboutModal");
+        var btn = document.getElementById("aboutButton");
+        var span = document.getElementsByClassName("close")[0];
+
+        // Ketika tombol "Tentang" diklik, modal akan ditampilkan
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // Ketika tombol close (x) diklik, modal akan disembunyikan
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Jika pengguna mengklik di luar modal, modal juga akan ditutup
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    
+    <script>
+        // Interaksi tombol "Masuk Kedalam arsip"
+        document.getElementById("masuk-arsip-btn").addEventListener("click", function() {
+            window.location.href = "e-arsip/index.php";
+        });
+
+    </script>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <!-- Tautan cepat -->
+            <div class="footer-links">
+            <!-- Media sosial -->
+            <div class="footer-social">
+                <h3>Ikuti Kami</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100090535098818&mibextid=rS40aB7S9Ucbxw6v" target="_blank"><img src="foto/facebook.png" alt="Facebook">Facebook</a>
+                    <a href="https://www.instagram.com/himafi_uin_ibpadang?igsh=bDBzeWF6dG55MnZo" target="_blank"><img src="foto/instagram.png" alt="Instagram">Instagram</a>
+                    <a href="https://www.tiktok.com/@himafi.uin.ibpadang?lang=id-ID&is_from_webapp=1&sender_device=mobile&sender_web_id=7475390872700634644" target="_blank"><img src="foto/tiktok.webp" alt="Tiktok">Tiktok</a>
+                    <a href="https://youtube.com/@himafi_uin_ibpadang8455?si=j7TOVxHsj_-Wt_wu" target="_blank"><img src="foto/youtube.jpg" alt="Youtube">Youtube</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; Infokom_HIMAFI-UIN-IB-2025/2026</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
