@@ -25,7 +25,9 @@
             margin-right: 5px;
         }
         .title h1, .title h2, .title h3, .title h4 {
-            line-height: 0.4;
+            line-height: 1.2;
+            text-align: center;
+            margin: 5px 0;
         }
         .main-container {
             display: flex;
@@ -117,6 +119,25 @@
             color: white;
             text-decoration: none;
             border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+
+            .title h1 {
+                font-size: 22px;
+            }
+
+            .title h2 {
+                font-size: 18px;
+            }
+
+            .title h3 {
+                font-size: 16px;
+            }
+
+            .title h4 {
+                font-size: 14px;
+            }
         }
 
     </style>
