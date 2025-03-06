@@ -1,6 +1,6 @@
 // Contoh data berita yang di-upload
 const news = [
-    { title: "Berita 1", link: "https://example.com/berita1" },
+    { title: "Berita 1", link: "../HIMAFINews/Berita1" },
     { title: "Berita 2", link: "https://example.com/berita2" },
     { title: "Berita 3", link: "https://example.com/berita3" },
     { title: "Berita 4", link: "https://example.com/berita4" }
