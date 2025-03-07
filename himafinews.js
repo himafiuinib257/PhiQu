@@ -1,6 +1,6 @@
 // Contoh data berita yang di-upload
 const news = [
-    { title: "cois 8", link: "HIMAFINews/Berita1.html" },
+    { title: "Website PhiQu Resmi Diluncurkan: Inovasi Baru dari Bidang Infokom", link: "HIMAFINews/Berita1.html" },
     { title: "Berita 2", link: "https://example.com/berita2" },
     { title: "Berita 3", link: "https://example.com/berita3" },
     { title: "Berita 4", link: "https://example.com/berita4" }
