@@ -1,5 +1,6 @@
 // Contoh data berita yang di-upload
 const news = [
+    { title: "Cerita Kompleks 'Mu' Sebelum Tidur", link: "HIMAFINews/Berita3.html"},
     { title: "FTK-Berbagi: Bersama Berbagi Menyemai Kasih Di Bulan Ramadhan", link: "HIMAFINews/Berita2.html" },
     { title: "Website PhiQu Resmi Diluncurkan: Inovasi Baru dari Bidang Infokom", link: "HIMAFINews/Berita1.html" },
 ];
